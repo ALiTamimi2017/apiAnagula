@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using apiAng.Api.Data;
 
 namespace apiAng.Api.Migrations
 {
     [DbContext(typeof(DataApiContext))]
-    partial class DataApiContextModelSnapshot : ModelSnapshot
+    [Migration("20191002062610_intrrr")]
+    partial class intrrr
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
