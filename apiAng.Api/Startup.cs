@@ -33,6 +33,7 @@ namespace apiAng.Api
             });
             services.AddControllers();
             services.AddCors();
+            services.AddScoped<IAuthRepository,AtuthRepisitory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
