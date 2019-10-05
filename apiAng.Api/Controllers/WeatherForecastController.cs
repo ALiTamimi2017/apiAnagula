@@ -23,13 +23,13 @@ namespace apiAng.Api.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly DataApiContext _context;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger ,DataApiContext  context)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, DataApiContext context)
         {
             _logger = logger;
-            _context=context;
+            _context = context;
         }
 
-    
+
         // public IEnumerable<WeatherForecast> Get()
         // {
         //     var rng = new Random();
@@ -41,16 +41,18 @@ namespace apiAng.Api.Controllers
         //     })
         //     .ToArray();
         // }
-            [HttpGet]
-        public async Task<IActionResult> GetValuse(){
-            var valse=await _context.Valuse.ToListAsync();
-        return Ok(valse);
-        }
+        // [HttpGet]
+        // public async Task<IActionResult> GetValuse()
+        // {
+        //     var valse = await _context.Valuse.ToListAsync();
+        //     return Ok(valse);
+        // }
 
-[HttpGet("{id}")]
-        public async Task<IActionResult> GetValuse(int id){
-            var valuses=await _context.Valuse.FirstOrDefaultAsync(x=>x.Id==id);
-return  Ok(valuses);
-        }
+        // [HttpGet("{id}")]
+        // public async Task<IActionResult> GetValuse(int id)
+        // {
+        //     var valuses = await _context.Valuse.FirstOrDefaultAsync(x => x.Id == id);
+        //     return Ok(valuses);
+        // }
     }
 }
